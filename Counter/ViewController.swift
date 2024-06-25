@@ -14,10 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet private weak var plusButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        plusButton.layer.cornerRadius
-        = 15
-        plusButton.layer.masksToBounds
-        = true
+        plusButton.layer.cornerRadius = 15
+        plusButton.layer.masksToBounds = true
         plusButton.backgroundColor = .green
         counterLabel.text = "Значение счетчика: 0"
 
