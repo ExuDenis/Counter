@@ -8,25 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var counter = 0
-
-    @IBOutlet weak var labelCounter: UILabel!
-    @IBOutlet weak var buttonCounter: UIButton!
+    private var counter = 0
+    
+    @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet private weak var plusButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonCounter.layer.cornerRadius
+        plusButton.layer.cornerRadius
         = 15
-        buttonCounter.layer.masksToBounds
+        plusButton.layer.masksToBounds
         = true
-        buttonCounter.backgroundColor = .green
-        labelCounter.text = "Значение счетчика: 0"
+        plusButton.backgroundColor = .green
+        counterLabel.text = "Значение счетчика: 0"
 
     }
 
-    @IBAction func addButtonCounter(_ sender: Any) {
+    @IBAction private func plusButtonTapped(_ sender: Any) {
         print("Нажатие")
         counter += 1
-        labelCounter.text = "Значение счетчика: \(counter)"
+        counterLabel.text = "Значение счетчика: \(counter)"
         
     }
     
